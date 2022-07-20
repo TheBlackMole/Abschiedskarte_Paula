@@ -7,7 +7,13 @@ function snow() {
     snowFlakeWrapper.classList.add("snow-wrapper");
 
     let snowFlake = document.createElement("div");
-    snowFlake.classList.add("snow-flake");
+    let color = Math.floor(Math.random() * 2);
+    if(color==0) {
+      snowFlake.classList.add("snow-flake");
+    }else {
+      snowFlake.classList.add("snow-flake2");
+    }
+    
 
     // schneeflocke zufällig auswählen
     let snowFlakeSymbolNumber = Math.floor(Math.random() * content.length);
